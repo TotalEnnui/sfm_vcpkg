@@ -776,3 +776,264 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/usr/share/cmake-3.28/Modules/FindBZip2.cmake:93 (CHECK_SYMBOL_EXISTS)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/freetype/vcpkg-cmake-wrapper.cmake:43 (find_package)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:847 (include)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLGraphicsDependencies.cmake:12 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for BZ2_bzCompressInit"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-74BAA2"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-74BAA2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "BZIP2_NEED_PREFIX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-74BAA2'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_bc497
+        [1/2] /usr/bin/gcc  -I/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/include  -o CMakeFiles/cmTC_bc497.dir/CheckSymbolExists.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-74BAA2/CheckSymbolExists.c
+        [2/2] : && /usr/bin/gcc   CMakeFiles/cmTC_bc497.dir/CheckSymbolExists.c.o -o cmTC_bc497  /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/lib/libbz2.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:682 (check_library_exists)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLWindowDependencies.cmake:31 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-sCWAFc"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-sCWAFc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-sCWAFc'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_b8ec9
+        [1/2] /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_b8ec9.dir/CheckFunctionExists.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-sCWAFc/CheckFunctionExists.c
+        [2/2] : && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=XOpenDisplay  CMakeFiles/cmTC_b8ec9.dir/CheckFunctionExists.c.o -o cmTC_b8ec9  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:697 (check_function_exists)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLWindowDependencies.cmake:31 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-hfXU76"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-hfXU76"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-hfXU76'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d6c5e
+        [1/2] /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_d6c5e.dir/CheckFunctionExists.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-hfXU76/CheckFunctionExists.c
+        [2/2] : && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=gethostbyname  CMakeFiles/cmTC_d6c5e.dir/CheckFunctionExists.c.o -o cmTC_d6c5e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:711 (check_function_exists)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLWindowDependencies.cmake:31 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-vXIEAc"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-vXIEAc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-vXIEAc'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_25067
+        [1/2] /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_25067.dir/CheckFunctionExists.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-vXIEAc/CheckFunctionExists.c
+        [2/2] : && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=connect  CMakeFiles/cmTC_25067.dir/CheckFunctionExists.c.o -o cmTC_25067   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:720 (check_function_exists)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLWindowDependencies.cmake:31 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-ngrYoQ"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-ngrYoQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-ngrYoQ'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_f2981
+        [1/2] /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_f2981.dir/CheckFunctionExists.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-ngrYoQ/CheckFunctionExists.c
+        [2/2] : && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=remove  CMakeFiles/cmTC_f2981.dir/CheckFunctionExists.c.o -o cmTC_f2981   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:729 (check_function_exists)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLWindowDependencies.cmake:31 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-cFh2Yj"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-cFh2Yj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-cFh2Yj'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_843af
+        [1/2] /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_843af.dir/CheckFunctionExists.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-cFh2Yj/CheckFunctionExists.c
+        [2/2] : && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=shmat  CMakeFiles/cmTC_843af.dir/CheckFunctionExists.c.o -o cmTC_843af   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLSystemDependencies.cmake:8 (find_dependency)"
+      - "build/linux-release/vcpkg_installed/x64-linux/share/sfml/SFMLConfig.cmake:153 (include)"
+      - "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-5ik9rU"
+      binary: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-5ik9rU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml;/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed/x64-linux/share/sfml"
+      VCPKG_INSTALLED_DIR: "/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/adrian/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-5ik9rU'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_b8ff3
+        [1/2] /usr/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b8ff3.dir/src.c.o -c /home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/CMakeScratch/TryCompile-5ik9rU/src.c
+        [2/2] : && /usr/bin/gcc   CMakeFiles/cmTC_b8ff3.dir/src.c.o -o cmTC_b8ff3   && :
+        
+      exitCode: 0
+...
