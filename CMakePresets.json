@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20
+  },
+  "configurePresets": [
+    {
+      "name": "linux-release",
+      "hidden": false,
+      "generator": "Ninja",
+      "description": "Release build using GCC and vcpkg",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_C_COMPILER": "/usr/bin/gcc",
+        "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+        "CMAKE_TOOLCHAIN_FILE": "/home/adrian/vcpkg/scripts/buildsystems/vcpkg.cmake"
+      }
+    }
+  ]
+}

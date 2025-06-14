@@ -1,0 +1,10 @@
+{
+  "name": "sfml-project",
+  "version": "0.1.0",
+  "dependencies": [
+    {
+      "name": "sfml",
+      "features": [ "graphics", "window", "audio", "network" ]
+    }
+  ]
+}
