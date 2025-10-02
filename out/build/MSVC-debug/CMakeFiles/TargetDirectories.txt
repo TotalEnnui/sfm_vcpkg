@@ -1,0 +1,4 @@
+C:/Users/alp19/Documents/repos/sfm_vcpkg/out/build/MSVC-debug/CMakeFiles/main.dir
+C:/Users/alp19/Documents/repos/sfm_vcpkg/out/build/MSVC-debug/CMakeFiles/INSTALL.dir
+C:/Users/alp19/Documents/repos/sfm_vcpkg/out/build/MSVC-debug/CMakeFiles/ALL_BUILD.dir
+C:/Users/alp19/Documents/repos/sfm_vcpkg/out/build/MSVC-debug/CMakeFiles/ZERO_CHECK.dir

@@ -1,3 +1,0 @@
-/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/main.dir
-/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/edit_cache.dir
-/home/adrian/Documents/Projects/sfml_vcpkg/build/linux-release/CMakeFiles/rebuild_cache.dir
