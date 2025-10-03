@@ -10,46 +10,7 @@
             }
         },
         {
-            "name": "MSVC-release",
-            "inherits": "base-manifest",
-            "displayName": "MSVC-manifest",
-            "generator": "Visual Studio 17 2022",
-            "description": "Base preset for vcpkg builds",
-            "binaryDir": "${sourceDir}/build/release",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
-                "CMAKE_EXPORT_LINK_COMMANDS": "YES",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/",
-                "CMAKE_OUTPUT_DIRECTORY": "${sourceDir}/build/release",
-                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/build/release",
-                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/build/release"
-            }
-        },
-        {
-            "name": "MSVC-debug",
-            "inherits": "base-manifest",
-            "displayName": "MSVC Debug",
-            "description": "Debug configuration using vcpkg manifest mode",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
-                "CMAKE_EXPORT_LINK_COMMANDS": "YES",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/debug/",
-                "CMAKE_OUTPUT_DIRECTORY": "${sourceDir}/build/debug",
-                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/debug",
-                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/debug",
-                "CMAKE_PREFIX_PATH": "C:/vcpkg/installed/x64-windows",
-                "VCPKG_ROOT": "C:/vcpkg",
-                "VCPKG_TARGET_ARCHITECTURE": "x64-windows",
-                "VCPKG_CMAKE_SYSTEM_NAME": "Windows",
-                "VCPKG_TARGET_TRIPLET": "x64-windows"
-            }
-        },
-            {
-            "name": "MSVC-classic",
+            "name": "msvc_classic",
             "displayName": "MSVC-classic",
             "generator": "Visual Studio 17 2022",
             "description": "Base preset for vcpkg builds",
@@ -69,8 +30,69 @@
                 "VCPKG_TARGET_TRIPLET": "x64-windows"
             }
         },
+            {
+            "name": "msvc_debug",
+            "inherits": "base-manifest",
+            "displayName": "MSVC Debug",
+            "description": "Debug configuration using vcpkg manifest mode",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+                "CMAKE_EXPORT_LINK_COMMANDS": "YES",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/debug/",
+                "CMAKE_OUTPUT_DIRECTORY": "${sourceDir}/build/debug",
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/debug",
+                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/debug",
+                "CMAKE_PREFIX_PATH": "C:/vcpkg/installed/x64-windows",
+                "VCPKG_ROOT": "C:/vcpkg",
+                "VCPKG_TARGET_ARCHITECTURE": "x64-windows",
+                "VCPKG_CMAKE_SYSTEM_NAME": "Windows",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        },
         {
-            "name": "ucrt64-gcc",
+            "name": "msvc_ninja",
+            "displayName": "MSVC ninja",
+            "description": "msvc ninja builds",
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_FLAGS": "/W4 /WX",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+                "CMAKE_EXPORT_LINK_COMMANDS": "YES",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/",
+                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/build/release",
+                "CMAKE_OUTPUT_DIRECTORY": "${sourceDir}/build/release",
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/build/release"
+            },
+            "generator": "Ninja",
+            "inherits": "base-manifest",
+            "environment": {
+                "VCPKG_ROOT": "C:/vcpkg"
+            }
+        },
+        {
+            "name": "msvc_release",
+            "inherits": "base-manifest",
+            "displayName": "MSVC-manifest",
+            "generator": "Visual Studio 17 2022",
+            "description": "Base preset for vcpkg builds",
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+                "CMAKE_EXPORT_LINK_COMMANDS": "YES",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/",
+                "CMAKE_OUTPUT_DIRECTORY": "${sourceDir}/build/release",
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/build/release",
+                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/build/release"
+            }
+        },
+        {
+            "name": "ucrt64_gcc",
             "inherits": "base-manifest",
             "displayName": "MSYS2 UCRT64 GCC",
             "generator": "Ninja",
@@ -93,30 +115,41 @@
     ],
     "buildPresets": [
         {
-            "name": "ucrt64-gcc",
-            "configurePreset": "ucrt64-gcc",
-            "description": "Build using MSYS2 UCRT64 GCC",
-            "jobs": 8
-        },
-        {
-            "name": "MSVC-manifest",
-            "configurePreset": "MSVC-release",
-            "description": "Build using MSVC with vcpkg manifest mode",
+            "name": "msvc_classic_build",
+            "displayName": "msvc classic mode build",
+            "configurePreset": "msvc_classic",
+            "description": "Build using MSVC with classic vcpkg mode",
             "configuration": "Release",
             "jobs": 8
         },
             {
-            "name": "msvc-debug",
+            "name": "msvc_debug_build",
             "displayName": "MSVC Debug",
-            "configurePreset": "MSVC-debug",
+            "configurePreset": "msvc_debug",
             "description": "Build using MSVC in Debug mode",
             "configuration": "Debug"
         },
         {
-            "name": "MSVC-classic",
-            "configurePreset": "MSVC-classic",
-            "description": "Build using MSVC with classic vcpkg mode",
+            "name": "msvc_manifest_build",
+            "displayName": "msvc_release manifest mode release build",
+            "configurePreset": "msvc_release",
+            "description": "Build using MSVC with vcpkg manifest mode",
             "configuration": "Release",
+            "jobs": 8
+        },
+        {
+            "name": "msvc_ninja_build",
+            "displayName": "MSVC Ninja Manifest build",
+            "configurePreset": "msvc_ninja",
+            "description": "Build using MSVC with Ninja and vcpkg manifest mode",
+            "configuration": "Release",
+            "jobs": 8
+        },
+        {
+            "name": "ucrt64_gcc_build",
+            "displayName": "ucrt64 gcc build",
+            "configurePreset": "ucrt64_gcc",
+            "description": "Build using MSYS2 UCRT64 GCC",
             "jobs": 8
         }
     ]

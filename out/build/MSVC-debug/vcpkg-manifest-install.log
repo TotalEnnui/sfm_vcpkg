@@ -1,6 +1,6 @@
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
-The following packages are already installed:
+The following packages will be built and installed:
   * brotli:x64-windows@1.1.0#1
   * bzip2[core,tool]:x64-windows@1.0.8#6
   * egl-registry:x64-windows@2024-01-25
@@ -17,6 +17,67 @@ The following packages are already installed:
   * vcpkg-cmake:x64-windows@2024-04-23
   * vcpkg-cmake-config:x64-windows@2024-05-23
   * zlib:x64-windows@1.3.1
+Additional packages (*) will be modified to complete this operation.
+Restored 16 package(s) from C:\Users\alp19\AppData\Local\vcpkg\archives in 2.5 s. Use --debug to see more details.
+Installing 1/16 egl-registry:x64-windows@2024-01-25...
+Elapsed time to handle egl-registry:x64-windows: 15.9 ms
+egl-registry:x64-windows package ABI: bb0ad77ff1623be8aa0d03197dc455549036cbaff4eac6a5472f73c62bcd544d
+Installing 2/16 opengl-registry:x64-windows@2024-02-10#1...
+Elapsed time to handle opengl-registry:x64-windows: 65.8 ms
+opengl-registry:x64-windows package ABI: 4e307914759ae3808f5d012614e473fbaeb6987ef15e48bec6c84c0f659954c4
+Installing 3/16 opengl:x64-windows@2022-12-04#3...
+Elapsed time to handle opengl:x64-windows: 30.3 ms
+opengl:x64-windows package ABI: 9b0b67d4f4718c66b073be2d60e84628dd6d8ff7a1b195c3c35cde700bdad8a4
+Installing 4/16 stb:x64-windows@2024-07-29#1...
+Elapsed time to handle stb:x64-windows: 45.5 ms
+stb:x64-windows package ABI: 999aa367ffc9134ef727dc3123cb1bcf099c1b4ec4a3809d5a930c4d01badc1e
+Installing 5/16 vcpkg-cmake:x64-windows@2024-04-23...
+Elapsed time to handle vcpkg-cmake:x64-windows: 28 ms
+vcpkg-cmake:x64-windows package ABI: 74e9f68b0623a8ad854cf6f4fbddfbe6ce3c27300f1c7d440c2b601dfff3ce1f
+Installing 6/16 zlib:x64-windows@1.3.1...
+Elapsed time to handle zlib:x64-windows: 32.4 ms
+zlib:x64-windows package ABI: 9ccb7edacbfe13fad96492f31b7ba2b30c7b90e64ea1a263403e8dbb15ac5117
+Installing 7/16 vcpkg-cmake-config:x64-windows@2024-05-23...
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 24.9 ms
+vcpkg-cmake-config:x64-windows package ABI: c54f8bf2fdfc68c96e14988756741eaf5da4848445822057c4b9214e100c6b29
+Installing 8/16 libpng:x64-windows@1.6.50...
+Elapsed time to handle libpng:x64-windows: 39 ms
+libpng:x64-windows package ABI: 90b776f017786a9e10e6d05767f03912076a3f0048a5482b1d49e7f8ac2d24e8
+Installing 9/16 bzip2[core,tool]:x64-windows@1.0.8#6...
+Elapsed time to handle bzip2:x64-windows: 34.9 ms
+bzip2:x64-windows package ABI: 698b6a06d308fe20adb2202261e032be76c0cb45ebfaa3e51fd57c16ca93f0ca
+Installing 10/16 brotli:x64-windows@1.1.0#1...
+Elapsed time to handle brotli:x64-windows: 65.5 ms
+brotli:x64-windows package ABI: 1924098900c149c3b5f4fbadcf661f56ce82faab79f25a390cc9c3112a7f18ba
+Installing 11/16 freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.13.3...
+Elapsed time to handle freetype:x64-windows: 101 ms
+freetype:x64-windows package ABI: 22ea2553e4a775081a68799a45bf466dbf11f33ab7aa557c619ee57dfba9a304
+Installing 12/16 miniaudio:x64-windows@0.11.22...
+Elapsed time to handle miniaudio:x64-windows: 26.4 ms
+miniaudio:x64-windows package ABI: beefc5984d0bcc0307b97e4fc0fd858dc4b9a2ca4b12c5fca343123b3fbaf60c
+Installing 13/16 libogg:x64-windows@1.3.6#1...
+Elapsed time to handle libogg:x64-windows: 32.5 ms
+libogg:x64-windows package ABI: a8390034af571d6253c78ac0a7ea7b5419cbe1bc4188f45d6d1a08453ff1483f
+Installing 14/16 libvorbis:x64-windows@1.3.7#4...
+Elapsed time to handle libvorbis:x64-windows: 42 ms
+libvorbis:x64-windows package ABI: 81f04f28df9fa5c9b0dfd343121c63b9d0d814f65b63343398f5e74758a2d7da
+Installing 15/16 libflac[core,stack-protector]:x64-windows@1.5.0...
+Elapsed time to handle libflac:x64-windows: 53.5 ms
+libflac:x64-windows package ABI: ea32c115e9bbecf7fb1b3551e740b0a4e9da8724de3838f24a5c313e44fbfe05
+Installing 16/16 sfml[audio,core,graphics,network,window]:x64-windows@3.0.1...
+Elapsed time to handle sfml:x64-windows: 189 ms
+sfml:x64-windows package ABI: eb220581b4b48d24ba2f357a20a62513047c35454f676c4fbb902067bbd2ad95
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(FTL OR GPL-2.0-or-later)
+(MIT OR CC-PDDC)
+(Unlicense OR MIT-0)
+BSD-3-Clause
+MIT
+Zlib
+bzip2-1.0.6
+libpng-2.0
 The package sfml provides CMake targets:
 
     find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
@@ -25,4 +86,4 @@ The package sfml provides CMake targets:
     # If you want SFML to provide an implementation of main():
     target_link_libraries(main PRIVATE SFML::Main)
 
-All requested installations completed successfully in: 2.33 ms
+All requested installations completed successfully in: 863 ms
